@@ -7,12 +7,12 @@ var outputEl=document.querySelector("#message");
 function lossCalculator(loss,cost){
   var lossPercentage=(loss/cost)*100;
   outputEl.style.color="red";
-  outputEl.innerHTML=`Sorry for your loss you have lost ${lossPercentage.toFixed(2)}% which is ${loss}`
+  outputEl.innerHTML=`Sorry for your loss, you have lost ${lossPercentage.toFixed(2)}% which is ${loss} .`
 }
 function profitCalculator(profit,cost){
     var profitPercentage=(profit/cost)*100;
   
-    outputEl.innerHTML=`congratulations you have gained a profit of ${profitPercentage.toFixed(2)}% which is ${profit}`
+    outputEl.innerHTML=`Congratulations you have gained a profit of ${profitPercentage.toFixed(2)}% which is ${profit} .`
     outputEl.style.color = "green"
 }
 
@@ -31,7 +31,7 @@ function clickHandler(){
       var loss=purchasePrice*stockQuantity-currentPrice*stockQuantity;
       lossCalculator(loss.toFixed(2),priceDiff.toFixed(2),totalCostOfBuying.toFixed(2));
   }else if(purchasePrice===currentPrice){
-    outputEl.innerHTML="You have neither gained nor lost anything check again after few days";
+    outputEl.innerHTML="You have neither gained nor lost anything please check again after few days.";
     outputEl.style.color = "yellow"
 }else{
     var priceDiff=currentPrice-purchasePrice;
