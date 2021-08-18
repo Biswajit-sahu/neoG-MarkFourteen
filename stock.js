@@ -13,6 +13,7 @@ function profitCalculator(profit,cost){
     var profitPercentage=(profit/cost)*100;
   
     outputEl.innerHTML=`congratulations you have gained a profit of ${profitPercentage.toFixed(2)}% which is ${profit}`
+    outputEl.style.color = "green"
 }
 function clickHandler(){
     if(purchasePriceInput.value===""||stockQuantityInput.value===""||currentPriceInput.value===""){
@@ -28,6 +29,7 @@ function clickHandler(){
       lossCalculator(loss.toFixed(2),priceDiff.toFixed(2),totalCostOfBuying.toFixed(2));
   }else if(purchasePrice===currentPrice){
     outputEl.innerHTML="You have neither gained nor lost anything check again after few days";
+    outputEl.style.color = "yellow"
 }else{
     var priceDiff=currentPrice-purchasePrice;
     var totalCostOfBuying=purchasePrice*stockQuantity;
