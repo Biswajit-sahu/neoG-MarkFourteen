@@ -15,6 +15,9 @@ function profitCalculator(profit,cost){
     outputEl.innerHTML=`congratulations you have gained a profit of ${profitPercentage.toFixed(2)}% which is ${profit}`
     outputEl.style.color = "green"
 }
+
+checkButton.addEventListener("click",clickHandler);
+
 function clickHandler(){
     if(purchasePriceInput.value===""||stockQuantityInput.value===""||currentPriceInput.value===""){
         alert("Please fill all the required fields");
@@ -38,4 +41,4 @@ function clickHandler(){
     profitCalculator(profit.toFixed(2),priceDiff.toFixed(2),totalCostOfBuying.toFixed(2));
   }
 }
-checkButton.addEventListener("click",clickHandler);
+
